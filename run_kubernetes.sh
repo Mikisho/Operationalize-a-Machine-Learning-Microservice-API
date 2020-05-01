@@ -5,14 +5,16 @@
 # Step 1:
 # This is your Docker ID/path
 # dockerpath=<>
+dockerpath=mickey24/udacityproj4
 
 # Step 2
 # Run the Docker Hub container with kubernetes
-
+kubectl run udevopsproj4 --image=$dockerpath --port=8001
 
 # Step 3:
 # List kubernetes pods
+kubectl get pods
 
 # Step 4:
 # Forward the container port to a host
-
+kubectl port-forward udevopsproj4 8001:80
